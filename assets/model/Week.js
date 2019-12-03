@@ -7,15 +7,13 @@ class Week {
 
         this._days = [];
 
-        const firstDate = new Date();
-        const weekDayNumber = firstDate.getDay();
-        firstDate.setDate(firstDate.getDate() - (weekDayNumber ? weekDayNumber - 1 : 7));// 1 :  1 2 3 4 5 6 0
+        const monday = Week.getMonday(date);
 
-        for (; ; firstDate.setDate(firstDate.getDate() + 1)) {
+        for (; ; monday.setDate(monday.getDate() + 1)) {
 
-            this._days.push( new Day(new Date(firstDate)));
+            this._days.push( new Day(new Date(monday)));
 
-            if(!firstDate.getDay()){
+            if(!monday.getDay()){
                 break;
             }
         }
@@ -25,10 +23,14 @@ class Week {
         return this._days;
     }
 
+    static getMonday(date){
+        const monday = new Date(date);
+        const weekDayNumber = monday.getDay();
+        monday.setDate(monday.getDate() - (weekDayNumber ? weekDayNumber - 1 : 6));
+
+        return monday;
+    }
+
 }
-
-
-
-
 
 export default Week;

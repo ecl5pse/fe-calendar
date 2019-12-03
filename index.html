@@ -9,31 +9,125 @@
             font-family: monospace;
         }
 
-        div{
+        table{
             margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 320px;
+            --themeColor: #475570;
+
+            font-size: 42px;
+            border-collapse: collapse;
+            font-weight: bold;
+            color: var(--themeColor);
         }
 
-        button{
+        thead{
+            background-color: #FFDE59;
+        }
+
+        td{
+            font-size: 14px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: var(--themeColor);
+            height: 70px;
+            min-width: 70px;
+            vertical-align: text-top;
+        }
+        .weeksDays{
+            font-size: 24px;
+        }
+        .weeksDays > th{
             text-transform: uppercase;
-            align-self: stretch;
+        }
+        th{
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .monthName{
+
+            text-transform: capitalize;
+
         }
 
     </style>
 </head>
 <body>
 
-<div>
-    <h1 id="timerValue"></h1>
 
-    <button id="start">start</button>
-    <button id="stop">stop</button>
-    <button id="reset">reset</button>
+<!--
+<table>
+    <thead>
+        <tr>
+            <th colspan="7" class="monthName">
+                Декабрь `19
+            </th>
+        </tr>
+        <tr class="weeksDays">
+            <th>ПН</th>
+            <th>ВТ</th>
+            <th>СР</th>
+            <th>ЧТ</th>
+            <th>ПТ</th>
+            <th>СБ</th>
+            <th>ВС</th>
+        </tr>
+    </thead>
 
-</div>
+    <tbody>
+
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+    </tr>
+
+    </tbody>
+
+
+</table>
+-->
+
+
+
 
 <script type="module" src="assets/view_model/index.js"></script>
 
